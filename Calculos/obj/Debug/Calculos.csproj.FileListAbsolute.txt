@@ -1,0 +1,6 @@
+D:\ProG\TrabajoPAAIV\Calculos\bin\Debug\Calculos.dll
+D:\ProG\TrabajoPAAIV\Calculos\bin\Debug\Calculos.pdb
+D:\ProG\TrabajoPAAIV\Calculos\obj\Debug\Calculos.csprojAssemblyReference.cache
+D:\ProG\TrabajoPAAIV\Calculos\obj\Debug\Calculos.csproj.CoreCompileInputs.cache
+D:\ProG\TrabajoPAAIV\Calculos\obj\Debug\Calculos.dll
+D:\ProG\TrabajoPAAIV\Calculos\obj\Debug\Calculos.pdb

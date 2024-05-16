@@ -1,0 +1,189 @@
+﻿@model MVCVentas.Models.DatosVentaModel
+
+@{
+    ViewBag.Title = "Nueva Venta";
+}
+
+@if (ViewBag.formularioVisible == true)
+{
+    <h2>Nueva Venta</h2>
+
+    using (Html.BeginForm())
+
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Ingresa una Nueva Venta</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.CodigoProducto, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CodigoProducto, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CodigoProducto, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NombreProducto, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NombreProducto, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.NombreProducto, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PrecioUnitarioUf, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PrecioUnitarioUf, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PrecioUnitarioUf, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ValorUfdia, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ValorUfdia, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.ValorUfdia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.UnidadesVenta, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UnidadesVenta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UnidadesVenta, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Confirmar" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Volver al Inicio", "Index")
+    </div>
+}
+
+@if (ViewBag.resultadosVisibles == true)
+{
+
+    <h2>Resumen de la Venta</h2>
+
+    <div>
+        <h4>Usted ha Vendido:</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CodigoProducto)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CodigoProducto)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreProducto)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NombreProducto)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PrecioUnitarioUf)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PrecioUnitarioUf)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ValorUfdia)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ValorUfdia)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UnidadesVenta)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UnidadesVenta)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fecha)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalVentaNetoUf)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalVentaNetoUf)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalVentaNetoPesos)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalVentaNetoPesos)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MontoIva)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MontoIva)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalVentaLiquido)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalVentaLiquido)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        | <a href="NuevaVenta" class="btn btn-default "><b>Volver a Ventas</b></a> |
+        <a href="Index" class="btn btn-default alert-danger"><b>Volver al Inicio</b></a> |
+    </div>
+        }
+    </div>
+
+}
+
+<br />
+<br />
+
+
+

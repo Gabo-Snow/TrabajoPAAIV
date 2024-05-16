@@ -1,0 +1,11 @@
+D:\ProG\TrabajoPAAIV\Servicios\bin\Debug\Servicios.dll
+D:\ProG\TrabajoPAAIV\Servicios\bin\Debug\Servicios.pdb
+D:\ProG\TrabajoPAAIV\Servicios\bin\Debug\Entidades.dll
+D:\ProG\TrabajoPAAIV\Servicios\bin\Debug\Newtonsoft.Json.dll
+D:\ProG\TrabajoPAAIV\Servicios\bin\Debug\Entidades.pdb
+D:\ProG\TrabajoPAAIV\Servicios\bin\Debug\Newtonsoft.Json.xml
+D:\ProG\TrabajoPAAIV\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+D:\ProG\TrabajoPAAIV\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+D:\ProG\TrabajoPAAIV\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+D:\ProG\TrabajoPAAIV\Servicios\obj\Debug\Servicios.dll
+D:\ProG\TrabajoPAAIV\Servicios\obj\Debug\Servicios.pdb
